@@ -5,7 +5,8 @@ function Cart ({
                 setCart,
                 orders,
                 setOrders,
-                baseUrl
+                baseUrl,
+                removeFromCart
             }) {
 
     useEffect (() => {
@@ -18,24 +19,6 @@ function Cart ({
             console.log('cart: ' + cart);
         });
     }, []);
-
-    function removeFromCart (item) {
-        fetch(baseUrl + 'cart/' + item.id, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        .then(res => {
-            setCart(() => {
-                return cart.filter((cartItem, index) => {
-                    if (item.id != cartItem.id) {
-                        return cartItem;
-                    }
-                })
-            });
-        })
-    }
 
     function orderItem (item) {
         fetch(baseUrl + 'orders', {

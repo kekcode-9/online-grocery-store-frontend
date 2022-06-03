@@ -54,13 +54,31 @@
     letter-spacing: 1px;
 }
 
+.actions {
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+
 .add-to-cart-button {
     cursor: pointer;
     width: 40%;
-    height: 10%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: rgb(169, 181, 194) solid;
+    border-width: 0.3px;
+}
+
+.remove-item-from-cart {
+    cursor: pointer;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     border: rgb(169, 181, 194) solid;
     border-width: 0.3px;
 }

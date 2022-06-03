@@ -1,79 +1,76 @@
 {
   "products": [
     {
-      "id": 0,
+      "id": 1,
       "name": "Basmati Rice",
       "image": "images/products/rice.jpg",
-      "price": "170"
-    },
-    {
-      "id": 1,
-      "name": "Quaker Oats",
-      "image": "images/products/oats.jpg",
-      "price": "150"
+      "price": "170",
+      "addedToCart": "no"
     },
     {
       "id": 2,
-      "name": "Tetley Tea",
-      "image": "images/products/tea.jpg",
-      "price": "89"
+      "name": "Quaker Oats",
+      "image": "images/products/oats.jpg",
+      "price": "150",
+      "addedToCart": "no"
     },
     {
       "id": 3,
-      "name": "Davidoff Coffee",
-      "image": "images/products/coffee.jpg",
-      "price": "450"
+      "name": "Tetley Tea",
+      "image": "images/products/tea.jpg",
+      "price": "89",
+      "addedToCart": "no"
     },
     {
       "id": 4,
-      "name": "Moong Daal",
-      "image": "images/products/daal.jpg",
-      "price": "200"
+      "name": "Davidoff Coffee",
+      "image": "images/products/coffee.jpg",
+      "price": "450",
+      "addedToCart": "no"
     },
     {
       "id": 5,
-      "name": "Kimia Dates",
-      "image": "images/products/dates.png",
-      "price": "279"
+      "name": "Moong Daal",
+      "image": "images/products/daal.jpg",
+      "price": "200",
+      "addedToCart": "no"
     },
     {
       "id": 6,
-      "name": "Potatoes 1kg",
-      "image": "images/products/potatoes.jpg",
-      "price": "34"
+      "name": "Kimia Dates",
+      "image": "images/products/dates.png",
+      "price": "279",
+      "addedToCart": "no"
     },
     {
       "id": 7,
-      "name": "Eggs (Pc. 6)",
-      "image": "images/products/eggs.jpg",
-      "price": "89"
+      "name": "Potatoes 1kg",
+      "image": "images/products/potatoes.jpg",
+      "price": "34",
+      "addedToCart": "no"
     },
     {
       "id": 8,
-      "name": "Britania Bread",
-      "image": "images/products/bread.jpg",
-      "price": "35"
+      "name": "Eggs (Pc. 6)",
+      "image": "images/products/eggs.jpg",
+      "price": "89",
+      "addedToCart": "no"
     },
     {
       "id": 9,
+      "name": "Britania Bread",
+      "image": "images/products/bread.jpg",
+      "price": "35",
+      "addedToCart": "no"
+    },
+    {
+      "id": 10,
       "name": "Keventer Bananas",
       "image": "images/products/banana.jpg",
-      "price": "60"
+      "price": "60",
+      "addedToCart": "no"
     }
   ],
   "cart": [],
-  "orders": [
-    {
-      "id": 2,
-      "name": "Tetley Tea",
-      "image": "images/products/tea.jpg",
-      "price": "89"
-    },
-    {
-      "id": 1,
-      "name": "Quaker Oats",
-      "image": "images/products/oats.jpg",
-      "price": "150"
-    }
-  ]
+  "orders": []
 }

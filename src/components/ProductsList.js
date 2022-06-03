@@ -2,9 +2,12 @@ function ProductsList ({products,
                         setProducts,
                         cart,
                         setCart,
-                        baseUrl}) {
+                        baseUrl,
+                        removeFromCart}) {
 
     function addToCart(item) {
+        item.addedToCart = 'yes';
+
         fetch(baseUrl + 'cart', {
           method: "POST",
           headers: {
@@ -19,6 +22,14 @@ function ProductsList ({products,
           setCart(() => {
                 return [...cart, data]; //all items in cart are as is and then you append newItem
             });
+        });
+
+        fetch(baseUrl + 'products/' + item.id, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+              },
+            body: JSON.stringify(item)
         })
     }
 
@@ -38,7 +49,23 @@ function ProductsList ({products,
                                     &#8377; {item.price}
                                 </div>
                             </div>
-                            <div className='add-to-cart-button' onClick={() => addToCart(item)}>add to cart</div>
+                            <div className="actions"
+                            style={{
+                                justifyContent: (item.addedToCart === 'yes') ? 'space-around' : 'center'
+                            }}
+                            >
+                                <div className='add-to-cart-button' onClick={() => addToCart(item)}>
+                                    add to cart
+                                </div>
+                                <div className="remove-item-from-cart"
+                                style={{
+                                    display: (item.addedToCart === 'yes') ? 'flex' : 'none'
+                                }}
+                                onClick={() => removeFromCart(item)}
+                                >
+                                    remove from cart
+                                </div>
+                            </div>
                     </div>
                 ))}
             </div>

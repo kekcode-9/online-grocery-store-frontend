@@ -24,6 +24,34 @@ function App() {
     });
   }, []);
 
+  function removeFromCart (item) {
+    item.addedToCart = 'no';
+    
+    fetch(baseUrl + 'cart/' + item.id, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(res => {
+        setCart(() => {
+            return cart.filter((cartItem, index) => {
+                if (item.id != cartItem.id) {
+                    return cartItem;
+                }
+            })
+        });
+    });
+
+    fetch(baseUrl + 'products/' + item.id, {
+      method: "PUT",
+      headers: {
+          "Content-Type": "application/json"
+        },
+      body: JSON.stringify(item)
+    });
+  }
+
 
   return (
     <div className="App" location={location} key={location.pathname}>
@@ -38,6 +66,7 @@ function App() {
             orders = {orders}
             setOrders = {setOrders}
             baseUrl = {baseUrl}
+            removeFromCart = {removeFromCart}
             />
           }
         />
@@ -59,6 +88,7 @@ function App() {
             cart = {cart}
             setCart = {setCart}
             baseUrl = {baseUrl}
+            removeFromCart = {removeFromCart}
             /> 
           }
         />}
