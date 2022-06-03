@@ -16,7 +16,7 @@ function Orders ({
     }, []);
 
     function cancelOrder (item) {
-        fetch(baseUrl + 'orders', {
+        fetch(baseUrl + 'orders/' + item.id, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"

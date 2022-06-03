@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Orders from "./Orders";
 
 function Navbar ({cart}) {
     return (
@@ -10,8 +9,8 @@ function Navbar ({cart}) {
                 </Link>
             </div>
             <div className="nav-links">
-                <Link to='/cart' className="link">cart {(cart.length > 0 && window.innerWidth > 900) && '[' + cart.length + ']'}</Link>
-                <Link to='/orders' className="link">orders {(Orders.length > 0 && window.innerWidth > 900) && '[' + Orders.length + ']'}</Link>
+                <Link to='/cart' className="link">cart</Link>
+                <Link to='/orders' className="link">orders</Link>
             </div>
         </div>
     );
