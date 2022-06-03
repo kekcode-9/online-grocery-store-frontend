@@ -1,0 +1,131 @@
+.orders {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 50%;
+    margin-top: 10%;
+}
+
+.ordered-items {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ordered-items:not(:first-child) {
+    margin-top: 35px;
+}
+
+.ordered-item-img {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.ordered-item-img > img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.item-info-and-options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ordered-item-info {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+}
+
+.cancel-order {
+    width: 150px;
+    height: 52px;
+}
+
+.cancellation-option {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.cancellation-option > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: rgb(169, 181, 194) solid;
+    border-width: 0.3px;
+    cursor: pointer;
+}
+
+.cancellation-option > div:hover {
+    transform: scale(1.07);
+    transition: all 0.3s ease-in-out;
+}
+
+.cancellation-option > div:active {
+    box-shadow: 0px 5px 7px rgb(132, 125, 125),
+                0px -5px 7px rgb(132, 125, 125),
+                5px 0px 7px rgb(132, 125, 125),
+                -5px 0px 7px rgb(132, 125, 125);
+}
+
+@media screen and (max-width: 1189px) {
+    .orders {
+        margin-top: 130px;
+    }
+
+    .ordered-items {
+        width: 100%;
+    }
+
+    .ordered-item-info {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .ordered-item-info {
+        width: 198px;
+    }
+}
+
+@media screen and (max-width: 724px) {
+    .orders {
+        align-items: center;
+    }
+
+    .ordered-items {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        height: 466px;
+    }
+
+    .ordered-item-img {
+        width: 84%;
+        height: 182%;
+    }
+
+    .item-info-and-options {
+        align-items: center;
+        width: 52%;
+    }
+
+    .cancellation-option {
+        width: 336px;
+        justify-content: center;
+    }
+}
