@@ -20,13 +20,12 @@ function App() {
     })
     .then(data => {
         setProducts(data);
-        console.log('here: ' + products);
     });
   }, []);
 
   function removeFromCart (item) {
     item.addedToCart = 'no';
-    
+
     fetch(baseUrl + 'cart/' + item.id, {
         method: "DELETE",
         headers: {

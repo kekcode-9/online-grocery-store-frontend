@@ -6,31 +6,32 @@ function ProductsList ({products,
                         removeFromCart}) {
 
     function addToCart(item) {
-        item.addedToCart = 'yes';
-
-        fetch(baseUrl + 'cart', {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(item)
-        })
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-          setCart(() => {
-                return [...cart, data]; //all items in cart are as is and then you append newItem
+        if (item.addedToCart !== 'yes') {
+            item.addedToCart = 'yes';
+            fetch(baseUrl + 'cart', {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify(item)
+            })
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+            setCart(() => {
+                    return [...cart, data]; //all items in cart are as is and then you append newItem
+                });
             });
-        });
-
-        fetch(baseUrl + 'products/' + item.id, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-              },
-            body: JSON.stringify(item)
-        })
+    
+            fetch(baseUrl + 'products/' + item.id, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(item)
+            })
+        }
     }
 
     return (

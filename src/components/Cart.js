@@ -16,7 +16,6 @@ function Cart ({
         })
         .then(data => {
             setCart(data);
-            console.log('cart: ' + cart);
         });
     }, []);
 
