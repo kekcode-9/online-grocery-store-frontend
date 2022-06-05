@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/online-grocery-store-frontend/static/css/main.cf1c56fe.css",
+    "main.js": "/online-grocery-store-frontend/static/js/main.6b7b3fd8.js",
+    "static/js/787.1cb08949.chunk.js": "/online-grocery-store-frontend/static/js/787.1cb08949.chunk.js",
+    "index.html": "/online-grocery-store-frontend/index.html",
+    "main.cf1c56fe.css.map": "/online-grocery-store-frontend/static/css/main.cf1c56fe.css.map",
+    "main.6b7b3fd8.js.map": "/online-grocery-store-frontend/static/js/main.6b7b3fd8.js.map",
+    "787.1cb08949.chunk.js.map": "/online-grocery-store-frontend/static/js/787.1cb08949.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf1c56fe.css",
+    "static/js/main.6b7b3fd8.js"
+  ]
+}
