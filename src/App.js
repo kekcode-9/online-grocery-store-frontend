@@ -10,7 +10,7 @@ function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [orders, setOrders] = useState([]);
-  const baseUrl = 'http://localhost:8000/';
+  const baseUrl = 'https://grocery-store-app-server.herokuapp.com/' || 'http://localhost:8000';
   const location = useLocation();
 
   useEffect(() => {
